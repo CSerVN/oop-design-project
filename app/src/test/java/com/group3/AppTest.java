@@ -3,11 +3,12 @@
  */
 package com.group3;
 
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
     @Test void appHasAGreeting() {
         GymTracking classUnderTest = new GymTracking();
+        assertNotNull(classUnderTest);
     }
 }
