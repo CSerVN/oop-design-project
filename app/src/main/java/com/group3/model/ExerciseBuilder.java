@@ -1,7 +1,7 @@
 package com.group3.model;
 
 public class ExerciseBuilder {
-	private int exerciseID;
+	private int exerciseID = -1;
 	private String exerciseName;
 	private ExerciseCategory category;
 	private TrackingType trackingType;
@@ -33,9 +33,13 @@ public class ExerciseBuilder {
 	}
 
 	public Exercise build() {
-		if (this.exerciseID == -1 || this.exerciseName == null || this.exerciseName.isEmpty()) {
-			throw new IllegalArgumentException("Don't have that exercise data!!");
+		if (this.exerciseID == -1 || this.exerciseName == null || this.exerciseName.isBlank()) {
+			throw new IllegalStateException("Exercise id and name are required!!");
 		}
+		if(this.category == null) 
+			throw new IllegalStateException("Exercise category is required");
+		if (trackingType == null)
+            throw new IllegalStateException("Exercise tracking type is required.");
 		return new Exercise(this.exerciseID, this.exerciseName, this.category, this.trackingType, this.targetMuscle);
 	}
 }
