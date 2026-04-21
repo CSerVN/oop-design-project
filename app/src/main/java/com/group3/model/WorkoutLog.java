@@ -11,30 +11,20 @@ public class WorkoutLog {
 	private double distance;
 	private double time;
 	
-	public WorkoutLog(int logID, LocalDateTime date, Exercise exercise, double weight, int reps, double distance,
-			double time) {
-		this.logID = logID;
-		this.date = date;
-		this.exercise = exercise;
-		this.weight = weight;
-		this.reps = reps;
-		this.distance = distance;
-		this.time = time;
-	}
-	public int getLogID() {
-		return logID;
+	private WorkoutLog(WorkoutLogBuilder builder) {
+		this.logID = builder.logID;
+		this.date = builder.date;
+		this.exercise = builder.exercise;
+		this.weight = builder.weight;
+		this.reps = builder.reps;
+		this.distance = builder.distance;
+		this.time = builder.time;
 	}
 	public void setLogID(int logID) {
 		this.logID = logID;
 	}
-	public LocalDateTime getDate() {
-		return date;
-	}
 	public void setDate(LocalDateTime date) {
 		this.date = date;
-	}
-	public Exercise getExercise() {
-		return exercise;
 	}
 	public void setExercise(Exercise exercise) {
 		this.exercise = exercise;
@@ -42,26 +32,67 @@ public class WorkoutLog {
 	public double getWeight() {
 		return weight;
 	}
-	public void setWeight(double weight) {
-		this.weight = weight;
-	}
 	public int getReps() {
 		return reps;
-	}
-	public void setReps(int reps) {
-		this.reps = reps;
 	}
 	public double getDistance() {
 		return distance;
 	}
-	public void setDistance(double distance) {
-		this.distance = distance;
-	}
 	public double getTime() {
 		return time;
 	}
-	public void setTime(double time) {
-		this.time = time;
+	public static class WorkoutLogBuilder {
+		private int logID = -1;
+		private LocalDateTime date;
+		private Exercise exercise;
+		private double weight;
+		private int reps;
+		private double distance;
+		private double time;
+
+		public WorkoutLogBuilder setLogID(int logID) {
+			this.logID = logID;
+			return this;
+		}
+
+		public WorkoutLogBuilder setDate(LocalDateTime date) {
+			this.date = date;
+			return this;
+		}
+
+		public WorkoutLogBuilder setExercise(Exercise exercise) {
+			this.exercise = exercise;
+			return this;
+		}
+
+		public WorkoutLogBuilder setWeight(double weight) {
+			this.weight = weight;
+			return this;
+		}
+
+		public WorkoutLogBuilder setReps(int reps) {
+			this.reps = reps;
+			return this;
+		}
+
+		public WorkoutLogBuilder setDistance(double distance) {
+			this.distance = distance;
+			return this;
+		}
+
+		public WorkoutLogBuilder setTime(double time) {
+			this.time = time;
+			return this;
+		}
+
+		public WorkoutLog build() {
+			if (this.logID == -1)
+				throw new IllegalStateException("Cannot create log: log id required!");
+			if (this.date == null)
+				throw new IllegalStateException("Cannot create log: date required!");
+			if (this.exercise == null)
+				throw new IllegalStateException("Cannot create log: date required!");
+			return new WorkoutLog(this);
+		}
 	}
-	
 }
