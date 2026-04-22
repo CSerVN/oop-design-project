@@ -3,13 +3,13 @@ package com.group3.model;
 import java.time.LocalDateTime;
 
 public class WorkoutLog {
-	private int logID;
-	private LocalDateTime date;
-	private Exercise exercise;
-	private double weight;
-	private int reps;
-	private double distance;
-	private double time;
+	private final int logID;
+	private final LocalDateTime date;
+	private final Exercise exercise;
+	private final double weight;
+	private final int reps;
+	private final double distance;
+	private final double time;
 	
 	private WorkoutLog(WorkoutLogBuilder builder) {
 		this.logID = builder.logID;
@@ -20,15 +20,19 @@ public class WorkoutLog {
 		this.distance = builder.distance;
 		this.time = builder.time;
 	}
-	public void setLogID(int logID) {
-		this.logID = logID;
+	
+	public int getLogID() {
+		return logID;
 	}
-	public void setDate(LocalDateTime date) {
-		this.date = date;
+
+	public LocalDateTime getDate() {
+		return date;
 	}
-	public void setExercise(Exercise exercise) {
-		this.exercise = exercise;
+
+	public Exercise getExercise() {
+		return exercise;
 	}
+
 	public double getWeight() {
 		return weight;
 	}
