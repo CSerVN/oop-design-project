@@ -3,26 +3,29 @@ package com.group3.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class User {
+public class User implements IAccount {
 	private int userID;
+	private String name;
 	private String username;
-	private String passwd;
+	private String password;
 	private int age;
 	private String gender;
 	private double height;
 	private double weight;
 	private WorkoutGoal goal;
-	private List<WorkoutLog> workoutLog;
-	private List<NutritionLog> nutritionLog;
+	private transient List<WorkoutLog> workoutLog;
+	private transient List<NutritionLog> nutritionLog;
 	public User() {
 		this.workoutLog = new ArrayList<>();
 		this.nutritionLog = new ArrayList<>();
 	}
-	public User(int userID, String username, String passwd, int age, String gender, double height, double weight,
+	
+	public User(int userID, String name,String username, String password, int age, String gender, double height, double weight,
 			WorkoutGoal goal) {
 		this.userID = userID;
+		this.name = name;
 		this.username = username;
-		this.passwd = passwd;
+		this.password = password;
 		this.age = age;
 		this.gender = gender;
 		this.height = height;
@@ -37,17 +40,23 @@ public class User {
 	public void setUserID(int userID) {
 		this.userID = userID;
 	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
 	public String getUsername() {
 		return username;
 	}
 	public void setUsername(String username) {
 		this.username = username;
 	}
-	public String getPasswd() {
-		return passwd;
+	public String getPassword() {
+		return password;
 	}
-	public void setPasswd(String passwd) {
-		this.passwd = passwd;
+	public void setPassword(String passwd) {
+		this.password = passwd;
 	}
 	public int getAge() {
 		return age;

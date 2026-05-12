@@ -1,0 +1,78 @@
+[
+  {
+    "userID": 1,
+    "name": "Thinh",
+    "username": "thinh",
+    "password": "123",
+    "age": 19,
+    "gender": "Nam",
+    "height": 177.0,
+    "weight": 58.0,
+    "goal": "MUSCLE_GAIN"
+  },
+  {
+    "userID": 2,
+    "username": "minhbeo",
+    "password": "abc123",
+    "age": 38,
+    "gender": "Nam",
+    "height": 150.0,
+    "weight": 130.0,
+    "goal": "LOSE_FAT"
+  },
+  {
+    "userID": 3,
+    "name": "Tram",
+    "username": "tram123",
+    "password": "123@123",
+    "age": 18,
+    "gender": "Nữ",
+    "height": 154.0,
+    "weight": 43.0,
+    "goal": "MAINTENANCE"
+  },
+  {
+    "userID": 4,
+    "name": "Trung",
+    "username": "nigga123",
+    "password": "123",
+    "age": 23,
+    "gender": "Nam",
+    "height": 174.0,
+    "weight": 70.0,
+    "goal": "MUSCLE_GAIN"
+  },
+  {
+    "userID": 5,
+    "name": "Hoan",
+    "username": "shortgun",
+    "password": "shortgun123",
+    "age": 20,
+    "gender": "Nam",
+    "height": 167.0,
+    "weight": 60.0,
+    "goal": "MUSCLE_GAIN"
+  },
+  {
+    "userID": 6,
+    "name": "Bao",
+    "username": "charliepaul",
+    "password": "charliepaul123",
+    "age": 20,
+    "gender": "Nam",
+    "height": 173.0,
+    "weight": 90.0,
+    "goal": "LOSE_FAT"
+  },
+  {
+    "userID": 7,
+    "name": "Nguyen Van A",
+    "username": "nguyenvana",
+    "password": "nguyenvana123",
+    "age": 22,
+    "gender": "Nam",
+    "height": 1.76,
+    "weight": 79.0,
+    "goal": "MUSCLE_GAIN"
+  }
+]

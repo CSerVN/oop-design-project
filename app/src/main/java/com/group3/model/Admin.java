@@ -1,14 +1,23 @@
 package com.group3.model;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class Admin {
+public class Admin implements IAccount {
 	private String name;
-	private List<User> userList;
-	public Admin(String name) {
+	private String username;
+	private String password;
+	public Admin(String name, String username, String password) {
 		this.name = name;
-		this.userList = new ArrayList<User>();
+		this.username = username;
+		this.password = password;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	public String getUsername() {
+		return username;
+	}
+	public String getPassword() {
+		return password;
 	}
 	
 }

@@ -6,3 +6,13 @@ build
 
 # Ignore Kotlin plugin data
 .kotlin
+*.json
+# EXCEPT the database files (Git WILL track these)
+!users.json
+!admin.json
+!workoutLogs.json
+!nutritionLogs.json
+!exerciseLibrary.json
+# Ignore my report file
+*.docx
+*.pptx
