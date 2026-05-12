@@ -6,10 +6,11 @@ public class WorkoutLog {
 	private final int logID;
 	private final LocalDateTime date;
 	private final Exercise exercise;
-	private final double weight;
-	private final int reps;
-	private final double distance;
-	private final double time;
+	// Wrapper fields
+	private final Double weight;
+	private final Integer reps;
+	private final Double distance;
+	private final Double time;
 	
 	private WorkoutLog(WorkoutLogBuilder builder) {
 		this.logID = builder.logID;
@@ -33,26 +34,27 @@ public class WorkoutLog {
 		return exercise;
 	}
 
-	public double getWeight() {
+	public Double getWeight() {
 		return weight;
 	}
-	public int getReps() {
+	public Integer getReps() {
 		return reps;
 	}
-	public double getDistance() {
+	public Double getDistance() {
 		return distance;
 	}
-	public double getTime() {
+	public Double getTime() {
 		return time;
 	}
 	public static class WorkoutLogBuilder {
 		private int logID = -1;
 		private LocalDateTime date;
 		private Exercise exercise;
-		private double weight;
-		private int reps;
-		private double distance;
-		private double time;
+		// Default assignment operator
+		private Double weight = null;
+		private Integer reps = null;
+		private Double distance = null;
+		private Double time = null;
 
 		public WorkoutLogBuilder setLogID(int logID) {
 			this.logID = logID;
@@ -69,22 +71,22 @@ public class WorkoutLog {
 			return this;
 		}
 
-		public WorkoutLogBuilder setWeight(double weight) {
+		public WorkoutLogBuilder setWeight(Double weight) {
 			this.weight = weight;
 			return this;
 		}
 
-		public WorkoutLogBuilder setReps(int reps) {
+		public WorkoutLogBuilder setReps(Integer reps) {
 			this.reps = reps;
 			return this;
 		}
 
-		public WorkoutLogBuilder setDistance(double distance) {
+		public WorkoutLogBuilder setDistance(Double distance) {
 			this.distance = distance;
 			return this;
 		}
 
-		public WorkoutLogBuilder setTime(double time) {
+		public WorkoutLogBuilder setTime(Double time) {
 			this.time = time;
 			return this;
 		}

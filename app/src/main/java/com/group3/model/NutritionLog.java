@@ -3,15 +3,18 @@ package com.group3.model;
 public class NutritionLog {
 	private final int productID;
 	private final String productName;
-	private final double energy;
-	private final double protein;
-	private final double fat;
+	// Wrapper fields
+	private final Double energy;
+	private final Double protein;
+	private final Double fat;
+	private final Double carbohydrates;
 	private NutritionLog(NutritionLogBuilder builder) {
 		this.productID = builder.productID;
 		this.productName = builder.productName;
 		this.energy = builder.energy;
 		this.protein = builder.protein;
 		this.fat = builder.fat;
+		this.carbohydrates = builder.carbohydrates;
 	}
 	public int getProductID() {
 		return productID;
@@ -19,21 +22,27 @@ public class NutritionLog {
 	public String getProductName() {
 		return productName;
 	}
-	public double getEnergy() {
+	public Double getEnergy() {
 		return energy;
 	}
-	public double getProtein() {
+	public Double getProtein() {
 		return protein;
 	}
-	public double getFat() {
+	public Double getFat() {
 		return fat;
 	}
+	public Double getCarbohydrates() {
+		return carbohydrates;
+	}
+
 	public static class NutritionLogBuilder {
 		private int productID = -1;
 		private String productName;
-		private double energy;
-		private double protein;
-		private double fat;
+		// Default assignment operator
+		private Double energy = null;
+		private Double protein = null;
+		private Double fat = null;
+		private Double carbohydrates = null;
 		
 		public NutritionLogBuilder setProductID(int productID) {
 			this.productID = productID;
@@ -43,16 +52,20 @@ public class NutritionLog {
 			this.productName = productName;
 			return this;
 		}
-		public NutritionLogBuilder setEnergy(double energy) {
+		public NutritionLogBuilder setEnergy(Double energy) {
 			this.energy = energy;
 			return this;
 		}
-		public NutritionLogBuilder setProtein(double protein) {
+		public NutritionLogBuilder setProtein(Double protein) {
 			this.protein = protein;
 			return this;
 		}
-		public NutritionLogBuilder setFat(double fat) {
+		public NutritionLogBuilder setFat(Double fat) {
 			this.fat = fat;
+			return this;
+		}
+		public NutritionLogBuilder carbohydrates(Double carbohydrates) {
+			this.carbohydrates = carbohydrates;
 			return this;
 		}
 		public NutritionLog build() {

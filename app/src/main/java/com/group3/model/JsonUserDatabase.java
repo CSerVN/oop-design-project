@@ -79,4 +79,17 @@ public class JsonUserDatabase implements DataConnection<List<User>> {
 		users.add(newUser);
 		return saveData(users);
 	}
+
+	// Extra method for set Goal in case user want to change their goal
+	// That will update all content in user.json
+	public boolean updateUser(User updatedUser) {
+		List<User> users = loadData();
+		for (int i = 0; i < users.size(); i++) {
+			if (users.get(i).getUserID() == updatedUser.getUserID()) {
+				users.set(i, updatedUser);
+				return saveData(users);
+			}
+		}
+		return false;
+	}
 }
