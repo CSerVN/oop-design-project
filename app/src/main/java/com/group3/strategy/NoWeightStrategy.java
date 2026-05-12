@@ -18,14 +18,13 @@ public class NoWeightStrategy implements NextSetRecommendationStrategy {
         
         // Incase 2: Cardio
         if (currentDistance != null) {
-            // Khuyến khích chạy thêm 0.5km. Nếu có thời gian, gợi ý giữ nguyên để ép tốc độ (Pace) tốt hơn.
             Double nextDistance = currentDistance + 0.5; 
             Double nextTime = (currentTime != null) ? currentTime : null; 
             
             return new RecommendationResult(null, null, nextDistance, nextTime, "Thử thách tăng thêm 500m để nâng cao sức bền tim mạch!");
         }
 
-        // Trường hợp 3: Bài Tập tĩnh / Yoga (CHỈ CÓ Thời gian: Plank, Yoga, Stretching...)
+        // Incase 3: Flexibility (Just time: Plank, Yoga, Stretching...)
         if (currentTime != null) {
             // Khuyến khích giữ tư thế lâu hơn 1 phút (hoặc 10 giây tùy đơn vị time bạn quy định)
             Double nextTime = currentTime + 1.0; 
