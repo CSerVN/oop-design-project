@@ -1,0 +1,32 @@
+[
+  {
+    "productID": 66411,
+    "productName": "Cocacola original  500",
+    "addTime": "2026-05-13T23:34:26.4141897",
+    "quantity": 2,
+    "energy": 42.0,
+    "protein": 0.0,
+    "fat": 0.0,
+    "carbohydrates": 10.6
+  },
+  {
+    "productID": 59314,
+    "productName": "Cocacola original  500",
+    "addTime": "2026-05-14T00:15:59.3163221",
+    "quantity": 2,
+    "energy": 42.0,
+    "protein": 0.0,
+    "fat": 0.0,
+    "carbohydrates": 10.6
+  },
+  {
+    "productID": 66429,
+    "productName": "Cocacola original  500",
+    "addTime": "2026-05-14T00:19:26.4317315",
+    "quantity": 2,
+    "energy": 42.0,
+    "protein": 0.0,
+    "fat": 0.0,
+    "carbohydrates": 10.6
+  }
+]

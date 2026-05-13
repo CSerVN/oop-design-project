@@ -1,6 +1,7 @@
 package com.group3.model;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class WorkoutLog {
 	private final int logID;
@@ -93,12 +94,35 @@ public class WorkoutLog {
 
 		public WorkoutLog build() {
 			if (this.logID == -1)
-				throw new IllegalStateException("Cannot create log: log id required!");
+				throw new IllegalStateException("Cần có ID để lưu log!");
 			if (this.date == null)
-				throw new IllegalStateException("Cannot create log: date required!");
+				throw new IllegalStateException("Cần có ngày tháng để lưu log!");
 			if (this.exercise == null)
-				throw new IllegalStateException("Cannot create log: date required!");
+				throw new IllegalStateException("Cần có bài tập để lưu log!");
 			return new WorkoutLog(this);
 		}
+	}
+	@Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        
+        DateTimeFormatter formatter = 
+        DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
+            
+        sb.append("Bài tập: ").append(exercise.getExerciseName())
+          .append(" [").append(date.format(formatter)).append("]\n");
+        
+        if (weight != null) sb.append("Mức tạ: ").append(weight).append(" kg\n");
+        if (reps != null) sb.append("Số hiệp: ").append(reps).append("\n");
+        if (distance != null) sb.append("Quãng đường: ").append(distance).append(" km\n");
+        if (time != null) sb.append("Thời gian: ").append(time).append(" phút\n");
+        if(distance != null && time != null) {
+        	System.out.println("Pace: " + paceCal());
+        }
+        return sb.toString();
+    }
+
+	public double paceCal() {
+		return this.time/this.distance;
 	}
 }

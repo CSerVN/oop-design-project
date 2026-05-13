@@ -1,0 +1,41 @@
+[
+  {
+    "logID": 6431,
+    "date": "2026-05-13T23:34:26.4313705",
+    "exercise": {
+      "exerciseID": 101,
+      "exerciseName": "Bench Press",
+      "category": "COMPOUND",
+      "trackingType": "WEIGHT_REP_TIME",
+      "targetMuscle": "Ngực"
+    },
+    "weight": 50.0,
+    "reps": 18
+  },
+  {
+    "logID": 9351,
+    "date": "2026-05-14T00:15:59.3511652",
+    "exercise": {
+      "exerciseID": 101,
+      "exerciseName": "Bench Press",
+      "category": "COMPOUND",
+      "trackingType": "WEIGHT_REP_TIME",
+      "targetMuscle": "Ngực"
+    },
+    "weight": 50.0,
+    "reps": 18
+  },
+  {
+    "logID": 6469,
+    "date": "2026-05-14T00:19:26.4697397",
+    "exercise": {
+      "exerciseID": 101,
+      "exerciseName": "Bench Press",
+      "category": "COMPOUND",
+      "trackingType": "WEIGHT_REP_TIME",
+      "targetMuscle": "Ngực"
+    },
+    "weight": 50.0,
+    "reps": 18
+  }
+]

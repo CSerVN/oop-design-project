@@ -13,11 +13,16 @@ public class WorkoutHandling {
 	private NextSetRecommendationStrategy currentStrategy;
 
 	public RecommendationResult calculateNextSet(WorkoutLog currentLog) {
-		if (this.currentStrategy == null) {
-			throw new IllegalStateException("Chưa thiết lập chiến lược tập luyện (Strategy)!");
-		}
-		return this.currentStrategy.calculateNextSet(currentLog);
-	}
+        if (this.currentStrategy == null) {
+            throw new IllegalStateException("Chưa thiết lập chiến lược tập luyện (Strategy)!");
+        }
+        
+        if (currentLog.getWeight() == null) {
+            return new NoWeightStrategy().calculateNextSet(currentLog);
+        }
+
+        return this.currentStrategy.calculateNextSet(currentLog);
+    }
 
 	public void setGoal(User user) {
 		if (user == null || user.getGoal() == null) {

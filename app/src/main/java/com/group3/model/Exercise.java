@@ -73,12 +73,12 @@ public class Exercise {
 
 		public Exercise build() {
 			if (this.exerciseID == -1 || this.exerciseName == null || this.exerciseName.isBlank()) {
-				throw new IllegalStateException("Exercise id and name are required!!");
+				throw new IllegalStateException("Cần có ID và tên bài tập!");
 			}
 			if(this.category == null) 
-				throw new IllegalStateException("Exercise category is required");
+				throw new IllegalStateException("Cần có thể loại bài tập!");
 			if (trackingType == null)
-	            throw new IllegalStateException("Exercise tracking type is required.");
+	            throw new IllegalStateException("Cần có hình thức tập luyện!");
 			return new Exercise(this);
 		}
 	}

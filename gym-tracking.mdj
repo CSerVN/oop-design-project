@@ -14968,9 +14968,9 @@
 													},
 													"font": "Arial;13;0",
 													"parentStyle": true,
-													"left": 32.72998046875,
+													"left": 30.55908203125,
 													"top": 13,
-													"width": 48.4072265625,
+													"width": 43.32275390625,
 													"height": 13,
 													"text": "Register"
 												},
@@ -14984,7 +14984,7 @@
 													"parentStyle": true,
 													"left": 13,
 													"top": 13,
-													"width": 13.72998046875,
+													"width": 11.55908203125,
 													"height": 13,
 													"text": "sd"
 												}
@@ -15632,9 +15632,9 @@
 													},
 													"font": "Arial;13;0",
 													"parentStyle": true,
-													"left": 40.72998046875,
+													"left": 39.99365234375,
 													"top": 317,
-													"width": 162.58251953125,
+													"width": 146.1865234375,
 													"height": 13,
 													"text": "Check already exist account"
 												},
@@ -15648,7 +15648,7 @@
 													"parentStyle": true,
 													"left": 21,
 													"top": 317,
-													"width": 13.72998046875,
+													"width": 12.99365234375,
 													"height": 13,
 													"text": "alt"
 												},
@@ -15682,7 +15682,7 @@
 																	"parentStyle": true,
 																	"left": 36,
 																	"top": 350,
-																	"width": 81.6435546875,
+																	"width": 78.330078125,
 																	"height": 13,
 																	"text": "[Already exist]"
 																}
@@ -15717,7 +15717,7 @@
 																	"parentStyle": true,
 																	"left": 36,
 																	"top": 415,
-																	"width": 57.79541015625,
+																	"width": 55.9609375,
 																	"height": 13,
 																	"text": "[Not exist]"
 																}
@@ -49816,7 +49816,7 @@
 									"_parent": {
 										"$ref": "AAAAAAGdllPyL6QV2o0="
 									},
-									"name": "JsonLIbraryDatabase",
+									"name": "JsonLibraryDatabase",
 									"ownedElements": [
 										{
 											"_type": "UMLDependency",
@@ -53414,7 +53414,7 @@
 											"top": 231,
 											"width": 133.2216796875,
 											"height": 13,
-											"text": "JsonLIbraryDatabase"
+											"text": "JsonLibraryDatabase"
 										},
 										{
 											"_type": "LabelView",
