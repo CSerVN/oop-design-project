@@ -9,6 +9,11 @@ public class ExerciseLibrary {
 	public ExerciseLibrary() {
 		this.lib = new ArrayList<>();
 	}
+	
+	public List<Exercise> getLib() {
+		return lib;
+	}
+
 	public void addExercise(Exercise exercise) {
 		if(exercise != null) lib.add(exercise);
 	}
