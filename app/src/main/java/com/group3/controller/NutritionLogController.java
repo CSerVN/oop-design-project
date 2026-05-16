@@ -1,5 +1,7 @@
 package com.group3.controller;
 
+import java.util.List;
+
 import com.group3.model.DataConnection;
 import com.group3.model.INutrition;
 import com.group3.model.LogCollection;
@@ -14,10 +16,10 @@ public class NutritionLogController {
         this.nutritionAPI = nutritionAPI;
     }
     // Look up nutrition product depend on product name
-    public NutritionLog lookupNutrition(String productName) {
+    public List<NutritionLog> lookupNutrition(String productName) {
         if (nutritionAPI == null) {
             System.err.println("API chưa được khởi tạo!");
-            return null;
+            return new java.util.ArrayList<>();
         }
         return nutritionAPI.getNutritionInfo(productName); 
     }

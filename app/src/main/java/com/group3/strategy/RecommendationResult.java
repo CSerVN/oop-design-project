@@ -1,7 +1,5 @@
 package com.group3.strategy;
 
-import java.time.format.DateTimeFormatter;
-
 public class RecommendationResult {
 	private Double suggestedWeight;
 	private Integer suggestedReps;
@@ -42,8 +40,6 @@ public class RecommendationResult {
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
-
 		if (suggestedWeight != null)
 			sb.append("Mức tạ: ").append(suggestedWeight).append(" kg\n");
 		if (suggestedReps != null)
@@ -52,6 +48,10 @@ public class RecommendationResult {
 			sb.append("Quãng đường: ").append(suggestedDistance).append(" km\n");
 		if (suggestedTime != null)
 			sb.append("Thời gian: ").append(suggestedTime).append(" phút\n");
+            
+		if (message != null && !message.isEmpty())
+			sb.append("💡 Thông điệp: ").append(message).append("\n");
+            
 		return sb.toString();
 	}
 }

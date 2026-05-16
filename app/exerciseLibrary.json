@@ -1,0 +1,44 @@
+[
+  {
+    "exerciseID": 101,
+    "exerciseName": "Chạy bộ",
+    "category": "CARDIO",
+    "trackingType": "DISTANCE_TIME",
+    "targetMuscle": "Tim mạch & Chân"
+  },
+  {
+    "exerciseID": 201,
+    "exerciseName": "Dumbbell Bicep Curl",
+    "category": "ISOLATE",
+    "trackingType": "WEIGHT_REP",
+    "targetMuscle": "Tay trước (Biceps)"
+  },
+  {
+    "exerciseID": 202,
+    "exerciseName": "Tricep Extension",
+    "category": "ISOLATE",
+    "trackingType": "WEIGHT_REP",
+    "targetMuscle": "Tay sau (Triceps)"
+  },
+  {
+    "exerciseID": 301,
+    "exerciseName": "Pull Up",
+    "category": "COMPOUND",
+    "trackingType": "REP_ONLY",
+    "targetMuscle": "Lưng xô (Back/Lats)"
+  },
+  {
+    "exerciseID": 302,
+    "exerciseName": "Barbell Squat",
+    "category": "COMPOUND",
+    "trackingType": "WEIGHT_REP",
+    "targetMuscle": "Đùi & Mông (Legs/Glutes)"
+  },
+  {
+    "exerciseID": 303,
+    "exerciseName": "Barbell Bench Press",
+    "category": "COMPOUND",
+    "trackingType": "WEIGHT_REP",
+    "targetMuscle": "Ngực (Chest)"
+  }
+]

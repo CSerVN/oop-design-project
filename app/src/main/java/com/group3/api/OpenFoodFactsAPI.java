@@ -10,7 +10,7 @@ import java.nio.charset.StandardCharsets;
 public class OpenFoodFactsAPI {
     
     private static final String SEARCH_API_URL = "https://world.openfoodfacts.org/cgi/search.pl?search_terms=";
-    private static final String API_SUFFIX = "&search_simple=1&action=process&json=1";
+    private static final String API_SUFFIX = "&search_simple=1&action=process&json=1&page_size=5&cc=vn&lc=vi";
 
     public String fetchProductJsonByName(String productName) {
         try {
